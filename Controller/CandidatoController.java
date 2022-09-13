@@ -9,14 +9,14 @@ public class CandidatoController {
     
     public void salvar(Candidato candidato) throws Exception {
 		if (candidato.getNomeCandidato() == null || candidato.getNomeCandidato().length() < 3) {
-			throw new Exception("Nome invalido");
+			throw new Exception("Nome inválido");
 		}
 		CandidatoDao.getinstance().salvar(candidato);
 	}
 	
 	public void atualizar(Candidato candidato) throws Exception {
 		if (candidato.getNomeCandidato() == null || candidato.getNomeCandidato().length() < 3) {
-			throw new Exception("Nome inv�lido");
+			throw new Exception("Nome inválido");
 		}
 		CandidatoDao.getinstance().atualizar(candidato);
 	}
