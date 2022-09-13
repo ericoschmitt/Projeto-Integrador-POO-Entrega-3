@@ -33,8 +33,8 @@ public class CandidatoDao {
         try {
 			String sql = "insert into Candidato (nomeCandidato, idCandidato, partidoCandidato, fichaLimpa) values (?, ?, ?, ?)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, Candidato.getNomeCandidato());
-			pstmt.setint(2, Candidato.getIdCandidato());
+			pstmt.setint(1, Candidato.getIdCandidato());
+			pstmt.setString(2, Candidato.getNomeCandidato());
 			pstmt.setString(3, Candidato.getPartidoCandidato());
 			pstmt.setboolean(4, Candidato.getFichaLimpa());
 			pstmt.execute();
@@ -48,8 +48,8 @@ public class CandidatoDao {
             try {
 			String sql = "update Candidato set nomeCandidato = ?, idCandidato = ?, partidoCandidato = ?, fichaLimpa = ? where idCandidato = ?";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setString (1, Candidato.getNomeCandidato());
-			pstmt.setint    (2, Candidato.getIdCandidato());
+		    	pstmt.setint    (1, Candidato.getIdCandidato());
+			pstmt.setString (2, Candidato.getNomeCandidato());
 			pstmt.setString (3, Candidato.getPartidoCandidato());
 			pstmt.setboolean(4, Candidato.getFichaLimpa());
                        
