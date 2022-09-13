@@ -26,10 +26,10 @@ public class Principal {
 	testeCandidato();
     }
                 public static void testeCandidato(){
-                Candidato c1 = new Candidato();	        
+                Candidato c1 = new Candidato();
+		c1.setIdCandidato(1);
                 c1.setNomeCandidato("JOAO PAULO");
 		c1.setPartidoCandidato("Novo");
-                c1.setIdCandidato(1);
 		c1.setFichaLimpa(true);
 		
 		Candidato c2 = new Candidato();
@@ -61,23 +61,23 @@ public class Principal {
 }
                 
                 public static void testePesquisa(){
-                    Pesquisa p1 = new Pesquisa();
-                    p1.setFormatoPesquisa("Entrevistas face a face ");
-                    p1.setIdPesquisa(1);
-                    p1.setInstitutoPesquisa("Data Folha");
-                    p1.setLocalPesquisa("Parque Ibirapuera ");
+                    	Pesquisa p1 = new Pesquisa();
+			p1.setIdPesquisa(1);
+                    	p1.setFormatoPesquisa("Entrevistas face a face ");
+                  	p1.setInstitutoPesquisa("Data Folha");
+                    	p1.setLocalPesquisa("Parque Ibirapuera ");
                     
-                    Pesquisa p2 = new Pesquisa();
-                    p2.setFormatoPesquisa("Ligações Telefônicas ");
-                    p2.setIdPesquisa(2);
-                    p2.setInstitutoPesquisa("Vozes da cabeça");
-                    p2.setLocalPesquisa("Avenida Paulista ");
+			Pesquisa p2 = new Pesquisa();
+			p2.setIdPesquisa(2);
+                    	p2.setFormatoPesquisa("Ligações Telefônicas ");
+                    	p2.setInstitutoPesquisa("Vozes da cabeça");
+                    	p2.setLocalPesquisa("Avenida Paulista ");
                     
-                    Pesquisa p3 = new Pesquisa();
-                    p3.setFormatoPesquisa("On-line ");
-                    p3.setIdPesquisa(3);
-                    p3.setInstitutoPesquisa("Modal ");
-                    p3.setLocalPesquisa("E-mail");
+                    	Pesquisa p3 = new Pesquisa();
+			p3.setIdPesquisa(3);
+                    	p3.setFormatoPesquisa("On-line ");
+                    	p3.setInstitutoPesquisa("Modal ");
+                    	p3.setLocalPesquisa("E-mail");
                     
                     PesquisaController controller = new PesquisaController();
 		try {
