@@ -8,14 +8,14 @@ public class PesquisaController {
     
     public void salvar(Pesquisa pesquisa) throws Exception {
 		if (pesquisa.getInstitutoPesquisa() == null || pesquisa.getInstitutoPesquisa().length() < 3) {
-			throw new Exception("Nome invalido");
+			throw new Exception("Nome inválido");
 		}
 		PesquisaDao.getinstance().salvar(pesquisa);
 	}
 	
 	public void atualizar(Pesquisa pesquisa) throws Exception {
 		if (pesquisa.getInstitutoPesquisa() == null || pesquisa.getInstitutoPesquisa().length() < 3) {
-			throw new Exception("Nome invalido");
+			throw new Exception("Nome inválido");
 		}
 		PesquisaDao.getinstance().atualizar(pesquisa);
 	}
