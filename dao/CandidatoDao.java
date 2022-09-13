@@ -31,10 +31,10 @@ public class CandidatoDao {
     }
     public void salvar(Candidato candidato) throws Exception {
         try {
-			String sql = "insert into Candidato (nomeCandidato, idCandidato, partidoCandidato, fichaLimpa) values (?, ?, ?, ?)";
+			String sql = "insert into Candidato (idCandidato, nomeCandidato, partidoCandidato, fichaLimpa) values (?, ?, ?, ?)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, Candidato.getNomeCandidato());
-			pstmt.setint(2, Candidato.getIdCandidato());
+			pstmt.setint(1, Candidato.getIdCandidato());
+			pstmt.setString(2, Candidato.getNomeCandidato());
 			pstmt.setString(3, Candidato.getPartidoCandidato());
 			pstmt.setboolean(4, Candidato.getFichaLimpa());
 			pstmt.execute();
@@ -46,10 +46,10 @@ public class CandidatoDao {
 	public void atualizar(Candidato candidato) throws Exception {
             
             try {
-			String sql = "update Candidato set nomeCandidato = ?, idCandidato = ?, partidoCandidato = ?, fichaLimpa = ? where idCandidato = ?";
+			String sql = "update Candidato set idCandidato = ?, nomeCandidato = ?, partidoCandidato = ?, fichaLimpa = ? where idCandidato = ?";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setString (1, Candidato.getNomeCandidato());
-			pstmt.setint    (2, Candidato.getIdCandidato());
+			pstmt.setint    (1, Candidato.getIdCandidato());
+		    	pstmt.setString (2, Candidato.getNomeCandidato());
 			pstmt.setString (3, Candidato.getPartidoCandidato());
 			pstmt.setboolean(4, Candidato.getFichaLimpa());
                        
