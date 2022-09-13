@@ -30,10 +30,10 @@ public class PesquisaDao {
     }
     public void salvar(Pesquisa pesquisa) throws Exception {
         try {
-			String sql = "insert into Pesquisa (institutoPesquisa, idPesquisa, tipoPesquisa, dataPesquisa, formatoPesquisa, localPesquisa) values (?, ?, ?, ?)";
+			String sql = "insert into Pesquisa (idPesquisa, institutoPesquisa, tipoPesquisa, dataPesquisa, formatoPesquisa, localPesquisa) values (?, ?, ?, ?)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setString (1, Pesquisa.getInstitutoPesquisa());
-			pstmt.setint    (2, Pesquisa.getIdPesquisa());
+			pstmt.setint    (1, Pesquisa.getIdPesquisa());
+			pstmt.setString (2, Pesquisa.getInstitutoPesquisa());
 			pstmt.setString (3, Pesquisa.getTipoPesquisa());
 			pstmt.setboolean(4, Pesquisa.getDataPesquisa());
                         pstmt.setboolean(5, Pesquisa.getFormatoPesquisa());
@@ -49,10 +49,10 @@ public class PesquisaDao {
 	
 	public void atualizar(Pesquisa pesquisa) throws Exception {
 		try {
-			String sql = "update Pesquisa set institutoPesquisa = ?, idPesquisa = ?, tipoPesquisa = ?, dataPesquisa = ? formatoPesquisa = ? localPesquisa = ? where idPesquisa = ?";
+			String sql = "update Pesquisa set idPesquisa = ?, institutoPesquisa = ?, tipoPesquisa = ?, dataPesquisa = ? formatoPesquisa = ? localPesquisa = ? where idPesquisa = ?";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setString (1, Pesquisa.getInstitutoPesquisa());
-			pstmt.setint    (2, Pesquisa.getIdPesquisa());
+			pstmt.setint    (1, Pesquisa.getIdPesquisa());
+			pstmt.setString (2, Pesquisa.getInstitutoPesquisa());
 			pstmt.setString (3, Pesquisa.getTipoPesquisa());
 			pstmt.setboolean(4, Pesquisa.getDataPesquisa());
                         pstmt.setboolean(5, Pesquisa.getFormatoPesquisa());
